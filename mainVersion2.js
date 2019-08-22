@@ -60,10 +60,8 @@ function getLine(start, end) {
 
 function getItem(start, end) {
     let result = '';
-    for (let index = start; index <= end; index++) {
-        const seperator = index === end ? '' : '\t';
-        result = result + getExpression(index, end) + seperator;       
-    }
+    const seperator = start === end ? '' : '\t';
+    result = result + getExpression(start, end) + seperator;       
     return result;
 }
 
